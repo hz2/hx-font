@@ -11,22 +11,20 @@
 - 支持 woff2 格式，最小仅为 `73.6 KB` 
 
 ### 用法：
-- 下载为`ZIP`，解压到工作目录
-- 在 `<head>`区间添加：
-```
-<link rel="stylesheet" href="路径/hx-font-master/hxfont.css">
-```
-- 在你需要的地方使用：
+1. 下载为 `ZIP`，解压到工作目录
+2. 在 `<head>` 区间添加：`<link rel="stylesheet" href="路径/hx-font-master/hxfont.css">`
+
+3. 在你需要的地方使用：
 ```
 <i class="hx-alpha"></i>
 ```
-- 也可以使用托管在的在线版本，无需下载：
+> 也可以使用托管在的在线版本，无需下载：
 
-    新浪云（HTTP版本）    
+* 新浪云（HTTP版本）    
 ```
 <link rel="stylesheet" href="http://img.huching.net/hx/hxfont.css">
 ```
-    七牛（HTTPS版本）
+* 七牛（HTTPS版本）
 ```
 <link rel="stylesheet" href="https://o4jtdolvr.qnssl.com/hxfont.css">
 ```
