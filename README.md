@@ -12,15 +12,7 @@
 
 ### 用法：
 1. 下载为 `ZIP`，解压到工作目录
-<<<<<<< HEAD
 2. 在 `<head>` 区间添加：`<link rel="stylesheet" href="路径/hx-font-master/hxfont.css">`
-=======
-2. 在 `<head>` 区间添加：
-```
-<link rel="stylesheet" href="路径/hx-font-master/hxfont.css">
-```
->>>>>>> master
-
 3. 在你需要的地方使用：
 ```
 <i class="hx-alpha"></i>
