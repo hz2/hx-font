@@ -21,11 +21,12 @@
 <i class="hx-alpha"></i>
 ```
 - 也可以使用托管在的在线版本，无需下载：
-新浪云（HTTP版本）
+
+    新浪云（HTTP版本）    
 ```
 <link rel="stylesheet" href="http://img.huching.net/hx/hxfont.css">
 ```
-七牛（HTTPS版本）
+    七牛（HTTPS版本）
 ```
 <link rel="stylesheet" href="https://o4jtdolvr.qnssl.com/hxfont.css">
 ```
