@@ -5,166 +5,85 @@
 <title>Demo</title>
 <link href="hxfont.css" rel="stylesheet" >
 <style>
-body {color:#555;font-family: "微软雅黑","Noto Sans CJK",serif;}
-.content { max-width: 940px; margin: 0 auto;}
-.box{ display: inline-block; border: 1px solid #898989; padding: 2px;margin: 5px;}
+body {color:#555;font-family: "微软雅黑","Noto Sans CJK",sans-serif;}
+.content { width: 940px; margin: 0 auto;}
+.box{ display: inline-block; border: 1px solid #898989; padding: 2px;margin: 5px;width:90px;}
 .box > i {padding: 2px; text-align: center; display: block;}
 .icon { text-align: center;padding: 2px;}
 .text { font-size: 20px; }
 .copy{ overflow: hidden;}
-.copy input { width: 86px; text-overflow: ellipsis;}
+.copy input { border: 1px solid #999;width:86px;border-radius: 2px;text-overflow: ellipsis;}
 .copy:hover input { text-overflow:inherit;overflow:visible;}
-[class^="hx-"]::before {
-    font-size: 60px;
-    line-height: 60px;
-}
-[class^="hx-"]hover::before {
-    font-size: 500px;
-    position: fixed;
-    width:500px;
-    height:500px;
-    line-height: 500px;
-    top:calc(50vh - 250px);
-    left:calc(50vw - 250px);
-}
-[class^="hx-"]::after {
-    display: block !important;
-}
-nav {
-    background: #ddd;
-    list-style: none;
-    position: fixed;
-    right: 0;
-    display: block;
-    height: 100%;
-    width: 200px;
-    top: 0;
-    padding: 11vh 0 0 15px;
-    margin-right: -210px;
-    border-left: 1px solid rgb(194, 194, 194);
-    z-index: 0;
-}
-nav:hover { margin-right: 0px;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        -ms-transition: all .3s;
-        -o-transition: all .3s;
-        transition: all .3s;
-}
+[class^="hx-"]::before { font-size: 60px; line-height: 60px; }
+[class^="hx-"]::after { display: block !important; }
+nav { background: #ddd;list-style: none;position: fixed;right: 0;display: block;height: 100%;width: 200px;top: 0;padding: 11vh 0 0 15px;margin-right: -210px;border-left: 1px solid rgb(194, 194, 194);z-index: 0; }
+nav:hover { margin-right: 0px;-webkit-transition: all .3s;-moz-transition: all .3s;-ms-transition: all .3s;-o-transition: all .3s;transition: all .3s; }
 nav a { color: #545454;  text-decoration: none;padding: 0px 3px;}
-nav li:nth-child(2n) a:hover{
-    background: white;
-    box-shadow: 1px 1px 1px #989898 inset;
-    border-radius: 2px;
-}
-nav::before {
-    content: " ";
-    display: block;
-    width: 0px;
-    height: 0px;
-    margin-left: -115px;
-    border-width: 30px 50px 70px;
-    border-style: solid;
-    border-color: transparent #ddd transparent transparent;
-    position: fixed;
-    top: 100px;
-    z-index: -2;
-}
-nav::after {
-    content: " ";
-    display: block;
-    width: 0px;
-    height: 0px;
-    margin-left: -118px;
-    border-width: 31px 51px 71px;
-    border-style: solid;
-    border-color: transparent rgb(194, 194, 194) transparent transparent;
-    position: fixed;
-    top: 99px;
-    z-index: -4;
-}
+nav li:nth-child(2n) a:hover{background: white;box-shadow: 1px 1px 1px #989898 inset;border-radius: 2px; }
+nav::before {content: " ";display: block;width: 0px;height: 0px;margin-left: -115px;border-width: 30px 50px 70px;border-style: solid;border-color: transparent #ddd transparent transparent;position: fixed;top: 100px;z-index: -2; }
+nav::after {content: " ";display: block;width: 0px;height: 0px;margin-left: -118px;border-width: 31px 51px 71px;border-style: solid;border-color: transparent rgb(194, 194, 194) transparent transparent;position: fixed;top: 99px;z-index: -4; }
 nav li:nth-child(2n+1) {font-size: 1.1em;}
-nav li:nth-child(2n) {
-    font-size: .8em;
-    padding: 2px 10px 2px 20px;
-    word-break: keep-all;
+nav li:nth-child(2n) {font-size: .8em;padding: 2px 10px 2px 20px;word-break: keep-all; }
+ul li:nth-child(8n+1).box i:hover[class^="hx-"]:before { margin-left: 200px;}
+ul li:nth-child(8n+2).box i:hover[class^="hx-"]:before { margin-left: 200px;}
+ul li:nth-child(8n+3).box i:hover[class^="hx-"]:before { margin-left: 100px;}
+ul li:nth-child(8n+6).box i:hover[class^="hx-"]:before { margin-left: -250px;}
+ul li:nth-child(8n+7).box i:hover[class^="hx-"]:before { margin-left: -380px;}
+ul li:nth-child(8n).box i:hover[class^="hx-"]:before { margin-left: -380px;}
+.box i:hover[class^="hx-"]:before{
+transition:all .4s 1s ease-out;transform: scale(8,8);box-shadow: .1px .1px 1px rgba(255,255,255,.1),-.1px -.1px 1px rgba(255,255,255,.1),1px 1px 1px 1000px rgba(0,0,0,.82);background: rgba(255,255,255,.82);z-index: 60;position: relative;
+cursor:wait;animation: color 5s;-moz-animation: color 5s;-webkit-animation: color 15s 1s linear infinite alternate;-o-animation: color 5s; }
+@keyframes color
+{   
+0%   {color:hsl(0,90%,50%);cursor:none;}
+8.3333333333333% {color:hsl(30,90%,50%);cursor:none;}
+16.666666666667%  {color:hsl(60,90%,50%);cursor:none;}
+25%  {color:hsl(90,90%,50%);cursor:none;}
+33.333333333333% {color:hsl(120,90%,50%);cursor:none;}
+41.666666666667%  {color:hsl(150,90%,50%);cursor:none;}
+50%  {color:hsl(180,90%,50%);cursor:none;}
+58.333333333333% {color:hsl(210,90%,50%);cursor:none;}
+66.666666666667%  {color:hsl(240,90%,50%);cursor:none;}
+75%  {color:hsl(270,90%,50%);cursor:none;}
+83.333333333333% {color:hsl(300,90%,50%);cursor:none;}
+91.666666666667%  {color:hsl(330,90%,50%);cursor:none;}
+100%  {color:hsl(360,90%,50%);cursor:none;}
 }
-ul.color {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    list-style: none;
-    margin: 0;
-    padding-left: 4px;
-    font-size: 13px;
-    background: #fff;
-    border-style: solid;
-    border-color: #777;
-    border-width: 1px 1px 0 0;
-    border-top-right-radius: 4px;
-}
-ul.color li {
-    float: right;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #555;
-    border-radius: 100%;
-    margin: 2px;
-}
-ul.color li:hover {
-    cursor: crosshair;
-}
-ul.color li:nth-child(1) {background:#0000FF;}
-ul.color li:nth-child(2) {background:#008000;}
-ul.color li:nth-child(3) {background:#0080FF;}
-ul.color li:nth-child(4) {background:#00FF00;}
-ul.color li:nth-child(5) {background:#00FF80;}
-ul.color li:nth-child(6) {background:#8000FF;}
-ul.color li:nth-child(7) {background:#808000;}
-ul.color li:nth-child(8) {background:#80FF00;}
-ul.color li:nth-child(9) {background:#FF0000;}
-ul.color li:nth-child(10) {background:#FF00FF;}
-ul.color li:nth-child(11) {background:#FF8000;}
-ul.color li:nth-child(12) {background:#FFFF00;}
-.zoom {color:green}
+hr  { margin:100px 10px 50px; border: dashed 1px #777;}
+hr + span {display: block;position: relative;z-index: 50;top: -72px;text-align: center;letter-spacing: 50px;line-height: 40px;font-size: 25px; }
+hr + span:after {content: " ";box-shadow: 220px 0px 0px 20px #FFF,295px 0px 0px 20px #FFF,370px 0px 0px 20px #FFF,445px 0px 0px 20px #FFF,520px 0px 0px 20px #FFF,595px 0px 0px 20px #FFF,670px 0px 0px 20px #FFF;z-index: 40;float: left;height: 20px; }
+fieldset { display: inline-block; border: teal 4px double; top: -9px; position: relative; padding-top: 0px;margin-left: 20px; }
+legend { font-size: 25px; font-weight: 700; padding: 0 8px;}
+fieldset p ,.ziku span:before { line-height: 1.5; font-size: 16px; margin: 0;text-align: left;}
+.logo { display: inline-block; color: teal; }
+.logo:before { font-size: 120px;}
+.ziku {text-align: center; padding: 40px 0 0; }
+.ziku a {text-decoration: none;color: teal; font-weight: 700;}
+.ziku legend span:before { transform: scale(2,2); font-size: 35px; top: 2px;position: relative; }
+.ziku legend span { width: 75px; display: inline-block; }
 </style>
 <script>
 window.onload = function() {
-
 var i1 = document.getElementsByTagName("i") ;
 for(x = 0; x < i1.length; x++) {
 var ix = i1[x],
 i2 = ix.cloneNode(true);
-var div = document.createElement("div");
-div.setAttribute("class","box");
-div.appendChild(i2);
-ix.parentNode.replaceChild(div,ix);
-div.insertAdjacentHTML('beforeend', '<div class="copy"><input />');
+var li = document.createElement("li");
+li.setAttribute("class","box");
+li.appendChild(i2);
+ix.parentNode.replaceChild(li,ix);
+li.insertAdjacentHTML('beforeend', '<div class="copy"><input />');
 var classx = ix.className;
-var input = div.getElementsByTagName("input")[0];
+var input = li.getElementsByTagName("input")[0];
 input.setAttribute("type","text");
 input.setAttribute("readonly","readonly");
 input.setAttribute("onClick","this.select();");
 input.setAttribute("value","."+classx);
-var copy = div.getElementsByClassName("copy")[0];
+var copy = li.getElementsByClassName("copy")[0];
 copy.setAttribute("title","."+classx);
 }
 }
-function color1(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#0000FF";}}
-function color2(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#008000";}}
-function color3(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#0080FF";}}
-function color4(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#00FF00";}}
-function color5(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#00FF80";}}
-function color6(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#8000FF";}}
-function color7(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#808000";}}
-function color8(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#80FF00";}}
-function color9(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#FF0000";}}
-function color10(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#FF00FF";}}
-function color11(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#FF8000";}}
-function color12(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#FFFF00";}}
-function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic.length; a++) {ic[a].style.color="#555555";}}
-
- </script>
+</script>
 </head>
 <body>
 <nav>
@@ -178,7 +97,7 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <a href="#bank4">民营银行</a>
 <a href="#bank5">外资银行</a>
 </li>
-<li><a href="#im">社交和搜索（50）</a></li>
+<li><a href="#im">社交和搜索（56）</a></li>
 <li>
 <a href="#im1">国内</a>
 <a href="#im2">国外</a>
@@ -196,7 +115,7 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <a href="#mp2">国外</a>
 <a href="#mp3">虚拟现实</a>
 </li>
-<li><a href="#hw">硬件和设备（51）</a></li>
+<li><a href="#hw">硬件和设备（54）</a></li>
 <li>
 <a href="#hw1">电脑和主机</a>
 <a href="#hw2">硬件</a>
@@ -209,7 +128,7 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <a href="#op1">国内</a>
 <a href="#op2">国外</a>
 </li>
-<li><a href="#os">操作系统（110）</a></li>
+<li><a href="#os">操作系统（112）</a></li>
 <li>
 <a href="#os1">Ubuntu</a>
 <a href="#os2">类UNIX</a>
@@ -218,7 +137,7 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <a href="#os5">移动系统</a>
 <a href="#os6">其他</a>
 </li>
-<li><a href="#un">难以分类（120）</a></li>
+<li><a href="#un">难以分类（126）</a></li>
 <li>
 <a href="#un1">湖心</a>
 <a href="#un2">版权</a>
@@ -229,13 +148,25 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 </li>
 </nav>
 <div class="content">
+<div class="ziku">
+<div class="hx-hxalpha logo"></div>
+<fieldset> 
+<legend><span class="hx-huxin"> </span>字库</legend>
+<p>更新（2016年11月20日）</p>
+<p>收录字符：497 个</p>
+<p><a href="https://github.com/hu2x/hx-font" target="_blank" ><span class="hx-github"></span> Fork me on Github</a></p>
+</fieldset>
+</div>
 <h2 id="bank">支付和银行（54）</h2>
 <h3 id="pay1">支付（4）</h3>
+<ul>
 <i class="hx-alipay" ></i>
 <i class="hx-wechatpay" ></i>
 <i class="hx-paypal"></i>
 <i class="hx-bitcoin"></i>
+</ul>
 <h3 id="pay2">信用卡（7）</h3>
+<ul>
 <i class="hx-unionpay"></i>
 <i class="hx-visa"></i>
 <i class="hx-mastercard"></i>
@@ -243,7 +174,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-discover"></i>
 <i class="hx-jcb"></i>
 <i class="hx-dinersclub"></i>
+</ul>
 <h3 id="bank1">国有银行（8）</h3>
+<ul>
 <i class="hx-pbc"></i>
 <i class="hx-boc"></i>
 <i class="hx-abc"></i>
@@ -252,7 +185,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-bocom"></i>
 <i class="hx-psbc"></i>
 <i class="hx-xinhe"></i>
+</ul>
 <h3 id="bank2">股份银行（12）</h3>
+<ul>
 <i class="hx-cmb"></i>
 <i class="hx-citic"></i>
 <i class="hx-hxb"></i>
@@ -265,7 +200,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-zheshang"></i>
 <i class="hx-bohai"></i>
 <i class="hx-hengfeng"></i>
+</ul>
 <h3 id="bank3">地方银行（7）</h3>
+<ul>
 <i class="hx-beijing"></i>
 <i class="hx-shanghai"></i>
 <i class="hx-huarun"></i>
@@ -273,10 +210,14 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-ningbo"></i>
 <i class="hx-shengjing"></i>
 <i class="hx-hkb"></i>
+</ul>
 <h3 id="bank4">民营银行（2）</h3>
+<ul>
 <i class="hx-mybank"></i>
 <i class="hx-webank"></i>
+</ul>
 <h3 id="bank5">外资银行（14）</h3>
+<ul>
 <i class="hx-hsbc"></i>
 <i class="hx-sc"></i>
 <i class="hx-hengsheng"></i>
@@ -291,21 +232,28 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-taiwan"></i>
 <i class="hx-ubs"></i>
 <i class="hx-citi"></i>
-<h2 id="im">社交和搜索（50）</h2>
-<h3 id="im1">国内（12）</h3>
+<h2 id="im">社交和搜索（56）</h2>
+</ul>
+<h3 id="im1">国内（15）</h3>
+<ul>
 <i class="hx-weibo"></i>
 <i class="hx-wechat"></i>
 <i class="hx-pyq"></i>
 <i class="hx-qq"></i>
+<i class="hx-qqo"></i>
+<i class="hx-qqtim"></i>
 <i class="hx-qzone"></i>
 <i class="hx-tieba"></i>
+<i class="hx-baidupan"></i>
 <i class="hx-huaji"></i>
 <i class="hx-163music"></i>
 <i class="hx-dingtalk"></i>
 <i class="hx-workwx"></i>
 <i class="hx-aliwangwang"></i>
 <i class="hx-qianniu"></i>
-<h3 id="im2">国外（29）</h3>
+</ul>
+<h3 id="im2">国外（32）</h3>
+<ul>
 <i class="hx-github"></i>
 <i class="hx-twitter"></i>
 <i class="hx-facebook"></i>
@@ -314,6 +262,8 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-youtube"></i>
 <i class="hx-instagram"></i>
 <i class="hx-vk"></i>
+<i class="hx-wiki"></i>
+<i class="hx-pocket"></i>
 <i class="hx-flickr"></i>
 <i class="hx-skype"></i>
 <i class="hx-messenger"></i>
@@ -334,8 +284,11 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-flattr"></i>
 <i class="hx-gitter"></i>
 <i class="hx-deviantart"></i>
+<i class="hx-reddit"></i>
 <i class="hx-stackoverflow"></i>
+</ul>
 <h3 id="im3">搜索引擎（9）</h3>
+<ul>
 <i class="hx-rss"></i>
 <i class="hx-search"></i>
 <i class="hx-baidu"></i>
@@ -346,7 +299,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-googleg"></i>
 <i class="hx-google"></i>
 <h2 id="llq">浏览器（35）</h2>
+</ul>
 <h3 id="llq1">桌面（23）</h3>
+<ul>
 <i class="hx-ie"></i>
 <i class="hx-edge"></i>
 <i class="hx-firefox"></i>
@@ -360,7 +315,7 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-360chrome"></i>
 <i class="hx-qqllq"></i>
 <i class="hx-bdllq"></i>
-<i class="hx-sogoullq"></i>
+<i class="hx-sgllq"></i>
 <i class="hx-theworld"></i>
 <i class="hx-vivaldi"></i>
 <i class="hx-yandex"></i>
@@ -370,13 +325,17 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-midori"></i>
 <i class="hx-tor"></i>
 <i class="hx-webkit"></i>
+</ul>
 <h3 id="llq2">移动（5）</h3>
+<ul>
 <i class="hx-uc"></i>
 <i class="hx-bdmllq"></i>
-<i class="hx-haitun"></i>
+<i class="hx-dolphin"></i>
 <i class="hx-cmcm2"></i>
 <i class="hx-cmcm"></i>
+</ul>
 <h3 id="llq3">相关（7）</h3>
+<ul>
 <i class="hx-abp"></i>
 <i class="hx-ublock"></i>
 <i class="hx-ghostery"></i>
@@ -385,7 +344,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-addons"></i>
 <i class="hx-webstore"></i>
 <h2 id="mp">手机和虚拟现实（46）</h2>
+</ul>
 <h3 id="mp1">国产（29）</h3>
+<ul>
 <i class="hx-huawei"></i>
 <i class="hx-honor"></i>
 <i class="hx-rongyao"></i>
@@ -415,7 +376,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-jianguo"></i>
 <i class="hx-tcl"></i>
 <i class="hx-alcatel"></i>
+</ul>
 <h3 id="mp2">国外（13）</h3>
+<ul>
 <i class="hx-apple"></i>
 <i class="hx-samsung"></i>
 <i class="hx-galaxy"></i>
@@ -429,13 +392,17 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-blackberry"></i>
 <i class="hx-pixel"></i>
 <i class="hx-micromax"></i>
+</ul>
 <h3 id="mp3">虚拟现实（4）</h3>
+<ul>
 <i class="hx-vive"></i>
 <i class="hx-oculus"></i>
 <i class="hx-cardboard"></i>
 <i class="hx-ozo"></i>
-<h2 id="hw">硬件和设备（51）</h2>
+<h2 id="hw">硬件和设备（54）</h2>
+</ul>
 <h3 id="hw1">电脑和主机（11）</h3>
+<ul>
 <i class="hx-hp"></i>
 <i class="hx-dell"></i>
 <i class="hx-acer"></i>
@@ -447,7 +414,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-preoator"></i>
 <i class="hx-xbox"></i>
 <i class="hx-playstation"></i>
-<h3 id="hw2">硬件（11）</h3>
+</ul>
+<h3 id="hw2">硬件（12）</h3>
+<ul>
 <i class="hx-gigabyte"></i>
 <i class="hx-kingston"></i>
 <i class="hx-wd"></i>
@@ -456,10 +425,13 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-toshiba"></i>
 <i class="hx-logi"></i>
 <i class="hx-razer"></i>
+<i class="hx-sorcair"></i>
 <i class="hx-aoc"></i>
 <i class="hx-onda"></i>
 <i class="hx-foxconn"></i>
+</ul>
 <h3 id="hw3">芯片（10）</h3>
+<ul>
 <i class="hx-intel"></i>
 <i class="hx-nvidia"></i>
 <i class="hx-amd"></i>
@@ -470,17 +442,22 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-hisilicon"></i>
 <i class="hx-allwinner"></i>
 <i class="hx-loongson"></i>
+</ul>
 <h3 id="hw4">开发板（3）</h3>
+<ul>
 <i class="hx-raspberrypi"></i>
 <i class="hx-arduin"></i>
 <i class="hx-firefly"></i>
-<h3 id="hw5">其他（16）</h3>
+</ul>
+<h3 id="hw5">其他（18）</h3>
+<ul>
 <i class="hx-cisco"></i>
 <i class="hx-ericsson"></i>
 <i class="hx-alcatel"></i>
 <i class="hx-siemens"></i>
 <i class="hx-fujitsu"></i>
 <i class="hx-hitachi"></i>
+<i class="hx-hds"></i>
 <i class="hx-hpe"></i>
 <i class="hx-nec"></i>
 <i class="hx-oracle"></i>
@@ -491,8 +468,11 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-yamaha"></i>
 <i class="hx-yamaha2"></i>
 <i class="hx-kodak"></i>
+<i class="hx-dolby"></i>
 <h2 id="op">电信运营商（14）</h2>
+</ul>
 <h3 id="op1">国内（7）</h3>
+<ul>
 <i class="hx-cmcc"></i>
 <i class="hx-cmccand"></i>
 <i class="hx-unicom"></i>
@@ -500,7 +480,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-unicomwo"></i>
 <i class="hx-chinatelecom"></i>
 <i class="hx-cthuango"></i>
+</ul>
 <h3 id="op2">国外（7）</h3>
+<ul>
 <i class="hx-verizon"></i>
 <i class="hx-att"></i>
 <i class="hx-sprint"></i>
@@ -508,8 +490,10 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-o2"></i>
 <i class="hx-orange"></i>
 <i class="hx-vodafone"></i>
-<h2 id="os">操作系统（110）</h2>
+<h2 id="os">操作系统（112）</h2>
+</ul>
 <h3 id="os1">Ubuntu（8）</h3>
+<ul>
 <i class="hx-ubuntu"></i>
 <i class="hx-ubuntugnome"></i>
 <i class="hx-ubuntumate"></i>
@@ -518,7 +502,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-xubuntu"></i>
 <i class="hx-gobuntu"></i>
 <i class="hx-ubuntustudio"></i>
+</ul>
 <h3 id="os2">类UNIX系统（62）</h3>
+<ul>
 <i class="hx-arch"></i>
 <i class="hx-mint"></i>
 <i class="hx-fedora"></i>
@@ -581,7 +567,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-steam"></i>
 <i class="hx-trisquel"></i>
 <i class="hx-trueos"></i>
+</ul>
 <h3 id="os3">国内（8）</h3>
+<ul>
 <i class="hx-ubuntukylin"></i>
 <i class="hx-kylin"></i>
 <i class="hx-neokylin"></i>
@@ -590,12 +578,16 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-anthon"></i>
 <i class="hx-deepin"></i>
 <i class="hx-qomo"></i>
+</ul>
 <h3 id="os4">桌面环境（4）</h3>
+<ul>
 <i class="hx-gnome"></i>
 <i class="hx-kde"></i>
 <i class="hx-xfce"></i>
 <i class="hx-mate"></i>
+</ul>
 <h3 id="os5">移动系统（11）</h3>
+<ul>
 <i class="hx-android"></i>
 <i class="hx-cyanogenmod"></i>
 <i class="hx-mokee"></i>
@@ -607,10 +599,14 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-tizen"></i>
 <i class="hx-sailfishos"></i>
 <i class="hx-plasmamobile"></i>
-<h3 id="os6">其他（17）</h3>
+</ul>
+<h3 id="os6">其他（19）</h3>
+<ul>
 <i class="hx-win10"></i>
 <i class="hx-win7"></i>
 <i class="hx-winphone"></i>
+<i class="hx-ios"></i>
+<i class="hx-macos"></i>
 <i class="hx-linux"></i>
 <i class="hx-linuxfoundation"></i>
 <i class="hx-sun"></i>
@@ -625,13 +621,18 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-virtualbox"></i>
 <i class="hx-vmware"></i>
 <i class="hx-gnu"></i>
-<h2 id="un">难以分类（120）</h2>
-<h3 id="un1">湖心（4）</h3>
+<h2 id="un">难以分类（126）</h2>
+</ul>
+<h3 id="un1">湖心（5）</h3>
+<ul>
 <i class="hx-hu"></i>
 <i class="hx-xin"></i>
 <i class="hx-huxin"></i>
-<i class="hx-alpha"></i>
+<i class="hx-hxalpha"></i>
+<i class="hx-hxbeta"></i>
+</ul>
 <h3 id="un2">版权（8）</h3>
+<ul>
 <i class="hx-cc"></i>
 <i class="hx-ccby"></i>
 <i class="hx-ccbync"></i>
@@ -640,7 +641,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-ccbyncsa"></i>
 <i class="hx-copyright"></i>
 <i class="hx-opensource"></i>
+</ul>
 <h3 id="un3">软件（14）</h3>
+<ul>
 <i class="hx-adobe"></i>
 <i class="hx-flash"></i>
 <i class="hx-autodesk"></i>
@@ -655,7 +658,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-openvpn"></i>
 <i class="hx-xunlei"></i>
 <i class="hx-youxiangdashi"></i>
-<h3 id="un4">网站（27）</h3>
+</ul>
+<h3 id="un4">网站（30）</h3>
+<ul>
 <i class="hx-canonical"></i>
 <i class="hx-amazon"></i>
 <i class="hx-microsoft"></i>
@@ -676,6 +681,9 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-126mail"></i>
 <i class="hx-aliyun"></i>
 <i class="hx-qcloud"></i>
+<i class="hx-qiniu"></i>
+<i class="hx-ename"></i>
+<i class="hx-sfgreen"></i>
 <i class="hx-googleplay"></i>
 <i class="hx-gitlab"></i>
 <i class="hx-cnbeta"></i>
@@ -683,15 +691,21 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-jianshu"></i>
 <i class="hx-zhihu"></i>
 <i class="hx-v2ex"></i>
-<h3 id="un5">语言（7）</h3>
+</ul>
+<h3 id="un5">语言（9）</h3>
+<ul>
 <i class="hx-php"></i>
+<i class="hx-jsf"></i>
+<i class="hx-angular"></i>
+<i class="hx-qt"></i>
 <i class="hx-swift"></i>
 <i class="hx-html5"></i>
 <i class="hx-w3c"></i>
 <i class="hx-rust"></i>
 <i class="hx-python"></i>
-<i class="hx-qt"></i>
+</ul>
 <h3 id="un6">其他（60）</h3>
+<ul>
 <i class="hx-attachment2"></i>
 <i class="hx-attachment"></i>
 <i class="hx-bookmark"></i>
@@ -744,7 +758,7 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-smile"></i>
 <i class="hx-starred"></i>
 <i class="hx-tags"></i>
-<i class="hx-theme"></i>
+<i class="hx-art"></i>
 <i class="hx-todo"></i>
 <i class="hx-warn"></i>
 <i class="hx-widgets"></i>
@@ -752,21 +766,8 @@ function color0(){var ic = document.getElementsByTagName("i") ;for(a = 0; a < ic
 <i class="hx-x64c"></i>
 <i class="hx-x86"></i>
 <i class="hx-x86c"></i>
-</div>
-<ul class="color">
-颜色预览：
-<li onmouseover="color1()" onmouseout="color0()"></li>
-<li onmouseover="color2()" onmouseout="color0()"></li>
-<li onmouseover="color3()" onmouseout="color0()"></li>
-<li onmouseover="color4()" onmouseout="color0()"></li>
-<li onmouseover="color5()" onmouseout="color0()"></li>
-<li onmouseover="color6()" onmouseout="color0()"></li>
-<li onmouseover="color7()" onmouseout="color0()"></li>
-<li onmouseover="color8()" onmouseout="color0()"></li>
-<li onmouseover="color9()" onmouseout="color0()"></li>
-<li onmouseover="color10()" onmouseout="color0()"></li>
-<li onmouseover="color11()" onmouseout="color0()"></li>
-<li onmouseover="color12()" onmouseout="color0()"></li>
 </ul>
+<hr /><span>我是有底线的。</span>
+</div>
 </body>
 </html>
