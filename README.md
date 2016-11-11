@@ -1,4 +1,6 @@
-<p align="center"><img height="200" width="200" src="http://img.huching.net/hx/hxalpha.svg"></p>
+<p align="center">
+<svg xmlns="http://www.w3.org/2000/svg" height="200" width="200" viewBox="0 0 600 600"><path d="M50 49.878V550h500V49.878H50zm25 24.99h450V524.88H75V74.868zm25 25V274.88l98-37.22 55.7 70.24 92.6-68.01 88.6 52.51-52-140.3 69.2-52.232H100zM346.3 291.89l-92.6 68.01-88.58-52.51 51.98 140.3-69.17 52.19H500v-175l-98 37.25-55.7-70.24z" fill="teal" fill-rule="evenodd"></path></svg>
+</p>
 <p align="center">&#28246;&#24515;&#23383;&#24211;</p>
 
 ## 湖心字库
