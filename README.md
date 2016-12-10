@@ -18,10 +18,9 @@
 <i class="hx-alpha"></i>
 ```
 > 也可以使用托管在的在线版本，无需下载：
-
-* 新浪云（HTTP版本）
 ```
 <link rel="stylesheet" href="https://hu2x.github.io/home/hxfont/hxfont.css">
+```
 
 ### 只想要其中部分图标字形怎么办？
 在线使用 [fontello](http://fontello.com/) 将 hxfont.svg 拖放到 `Custom Icons` 下面，勾选想要的字形，点击下载。
