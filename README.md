@@ -1,9 +1,9 @@
-<p align="center"><img height="200" width="200" src="https://hu2x.github.io/home/hxfont/hxalpha.svg"></p>
+<p align="center"><img height="200" width="200" src="https://hcw.github.io/home/hxfont/hxalpha.svg"></p>
 <p align="center">&#28246;&#24515;&#23383;&#24211;</p>
 
 ## 湖心字库
 
-**[【Demo - 全部图标在线预览】](https://hu2x.github.io/home/hxfont/demo.html)**
+**[【Demo - 全部图标在线预览】](https://hcw.github.io/home/hxfont/demo.html)**
 
 ### 特点：
 - 共收录 549 个图标
@@ -20,7 +20,7 @@
 > 也可以使用在线版本，无需下载：
 
 ```
-<link rel="stylesheet" href="https://hu2x.github.io/home/hxfont/hxfont.css">
+<link rel="stylesheet" href="https://hcw.github.io/home/hxfont/hxfont.css">
 ```
 
 ### 只想要其中部分图标字形怎么办？
