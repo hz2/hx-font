@@ -1,4 +1,4 @@
-<p align="center"><img height="200" width="200" src="https://hcw.github.io/home/hxfont/hxalpha.svg"></p>
+<p align="center"><img height="200" width="200" src="https://hcw.github.io/hxfont/hxalpha.svg"></p>
 <p align="center">&#28246;&#24515;&#23383;&#24211;</p>
 
 ## 湖心字库
