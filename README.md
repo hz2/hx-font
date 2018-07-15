@@ -3,7 +3,7 @@
 
 ## 湖心字库
 
-**[【Demo - 全部图标在线预览】](https://hz2.github.io/home/hxfont/demo.html)**
+**[【Demo - 全部图标在线预览】](https://hz2.github.io/hxfont/demo.html)**
 
 ### 特点：
 - 共收录 549 个图标
@@ -20,7 +20,7 @@
 > 也可以使用在线版本，无需下载：
 
 ```
-<link rel="stylesheet" href="https://hz2.github.io/home/hxfont/hxfont.css">
+<link rel="stylesheet" href="https://hz2.github.io/hxfont/hxfont.css">
 ```
 
 ### 只想要其中部分图标字形怎么办？
