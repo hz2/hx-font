@@ -1,9 +1,9 @@
-<p align="center"><img height="200" width="200" src="https://hcw.github.io/hxfont/hxalpha.svg"></p>
+<p align="center"><img height="200" width="200" src="https://hz2.github.io/hxfont/hxalpha.svg"></p>
 <p align="center">&#28246;&#24515;&#23383;&#24211;</p>
 
 ## 湖心字库
 
-**[【Demo - 全部图标在线预览】](https://hcw.github.io/home/hxfont/demo.html)**
+**[【Demo - 全部图标在线预览】](https://hz2.github.io/home/hxfont/demo.html)**
 
 ### 特点：
 - 共收录 549 个图标
@@ -20,14 +20,14 @@
 > 也可以使用在线版本，无需下载：
 
 ```
-<link rel="stylesheet" href="https://hcw.github.io/home/hxfont/hxfont.css">
+<link rel="stylesheet" href="https://hz2.github.io/home/hxfont/hxfont.css">
 ```
 
 ### 只想要其中部分图标字形怎么办？
 在线使用 [fontello](http://fontello.com/) 将 hxfont.svg 拖放到 `Custom Icons` 下面，勾选想要的字形，点击下载。
 
 ### 制作方法：
-[http://huching.net/2015/06/webfont/](http://huching.net/2015/06/webfont/)
+[https://hz2.github.io/blog/2015/06/webfont/](https://hz2.github.io/blog/2015/06/webfont/)
 
 > 图标来源主要是 Wikipedia、官网、以及部分成熟的webfont。90%以上的图标都重新手工临摹绘制。
 
